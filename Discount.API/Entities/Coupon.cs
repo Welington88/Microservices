@@ -11,10 +11,14 @@ namespace Discount.API.Entities
         [Key]
         public int Id { get; set; }
 
+        [Required]
+        [StringLength(50, ErrorMessage = " O Campo {0} pode ter no máximo {1} e minimo {2} caracteres ", MinimumLength = 2)]
         public String? ProductName { get; set; }
 
+        [Required]
+        [StringLength(100, ErrorMessage = " O Campo {0} pode ter no máximo {1} e minimo {2} caracteres ", MinimumLength = 2)]
         public String? Description { get; set; }
-
+        [Required]
         public int Amount { get; set; }
         
     }

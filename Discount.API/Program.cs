@@ -49,7 +49,7 @@ builder.Services.AddAuthentication(options => {
                 )
         };
     });
-builder.Services.AddScoped<IDiscountRepository, DiscountRepository> ();
+builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 builder.Services.AddControllers();
 
 builder.Services.AddApiVersioning(o =>
