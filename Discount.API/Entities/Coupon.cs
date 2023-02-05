@@ -9,6 +9,7 @@ namespace Discount.API.Entities
     public class Coupon
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
@@ -19,7 +20,7 @@ namespace Discount.API.Entities
         [StringLength(100, ErrorMessage = " O Campo {0} pode ter no máximo {1} e minimo {2} caracteres ", MinimumLength = 2)]
         public String? Description { get; set; }
         [Required]
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
         
     }
 }
